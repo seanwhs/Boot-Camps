@@ -1,5 +1,3 @@
-# `quizzes-and-tests/quizzes/part-02-networking.md`
-
 # Part 2 Quiz — How the Internet and the Web Work  
 ## Internet Infrastructure, IP Addresses, DNS, Packets, Routing, Ports, CDNs, Data Centers, and Latency
 
