@@ -77,11 +77,6 @@ quizzes-and-tests/
 │   ├── authentication-failure.md
 │   ├── slow-page-load.md
 │   └── production-outage.md
-├── answer-keys/
-│   ├── primer-answers.md
-│   ├── part-answers.md
-│   ├── scenario-answers.md
-│   └── capstone-answers.md
 └── rubrics/
     ├── architecture-rubric.md
     ├── troubleshooting-rubric.md
