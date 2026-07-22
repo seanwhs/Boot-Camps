@@ -1,5 +1,3 @@
-# `quizzes-and-tests/quizzes/part-01-architecture.md`
-
 # Part 1 Quiz — Deconstructing Software Architecture  
 ## Frontend, Backend, APIs, State, Rendering Models, and Full-Stack Systems
 
