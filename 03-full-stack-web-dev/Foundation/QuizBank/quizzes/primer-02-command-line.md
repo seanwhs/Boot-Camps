@@ -1,5 +1,3 @@
-# `quizzes-and-tests/quizzes/primer-02-command-line.md`
-
 # Primer 2 Quiz — Command-Line Fundamentals  
 ## Terminals, Shells, Files, Processes, Pipes, Environment Variables, cURL, and Command-Line Safety
 
