@@ -1,702 +1,256 @@
-# Primer 1 Quiz — Basic Computer Concepts
+# Update for `primer-01-computer-concepts.md`
 
-## Web Mechanics, Architecture & Network Fundamentals
-
-This quiz reviews the concepts introduced in:
-
-> **Primer 1 — Basic Computer Concepts for Web Learners**
-
-It focuses on:
-
-- Hardware and software
-- Operating systems
-- CPUs
-- Memory and storage
-- Files and folders
-- Programs and processes
-- Terminals and shells
-- Paths
-- Permissions
-- Environment variables
-- Ports
-- Localhost
-- Services
-- Local development systems
+Add the following section to the end of the existing file.
 
 ---
 
-## Instructions
+# Answer Key
 
-- Try to answer the questions before checking any answer key.
-- Explain your reasoning for short-answer and scenario questions.
-- Use a terminal for the practical exercises.
-- Do not run destructive commands on important files or systems.
-- This quiz assumes no previous Linux or command-line experience.
+## Section 1 — Multiple-Choice Answers
 
----
-
-## Learning Objectives
-
-After completing this quiz, you should be able to:
-
-- Explain the difference between hardware and software.
-- Describe the role of an operating system.
-- Distinguish RAM from persistent storage.
-- Explain the difference between a program and a process.
-- Understand files, folders, and paths.
-- Distinguish relative paths from absolute paths.
-- Explain what a terminal and shell do.
-- Describe environment variables.
-- Explain ports and localhost.
-- Understand how local frontend, backend, and database processes communicate.
-- Recognize the importance of permissions and least privilege.
-
----
-
-# Section 1 — Multiple-Choice Questions
-
-## Question 1
-
-Which of the following is hardware?
-
-- [ ] A web browser
-- [ ] A database query
-- [ ] A CPU
-- [ ] An environment variable
+| Question | Answer | Explanation |
+|---:|---|---|
+| 1 | A CPU | A CPU is a physical hardware component. |
+| 2 | A browser application | A browser is software. |
+| 3 | Manage hardware and provide services to applications | The operating system manages processes, memory, files, devices, and networking. |
+| 4 | CPU | The CPU executes program instructions. |
+| 5 | Temporary working memory used by running programs | RAM is fast but normally loses its contents when power is removed. |
+| 6 | It retains data after the computer is turned off | Persistent storage includes SSDs, hard drives, and other durable storage. |
+| 7 | A set of instructions stored for execution | A program is generally stored on disk before it runs. |
+| 8 | A running instance of a program | A process is an executing program. |
+| 9 | `src/` | The trailing slash conventionally indicates a directory. |
+| 10 | `app.js` | `.js` commonly identifies a JavaScript file. |
+| 11 | Manages files, directories, and file metadata | A filesystem organizes stored data. |
+| 12 | Prints the current working directory | `pwd` means “print working directory.” |
+| 13 | Changes the current directory | `cd` means “change directory.” |
+| 14 | An absolute filesystem path | It begins at the filesystem root. |
+| 15 | `src/app.js` | It is interpreted relative to the current directory. |
+| 16 | The parent directory | `..` refers to the directory above the current one. |
+| 17 | A text-based interface for interacting with a computer | A terminal provides a place to enter commands. |
+| 18 | A program that interprets and executes commands | The shell reads commands and invokes programs. |
+| 19 | Bash | Bash is a command shell. |
+| 20 | A named configuration value for processes | Environment variables provide runtime configuration. |
+| 21 | `PORT=3000` | This is a typical environment-variable assignment. |
+| 22 | A service or application on a networked system | A port identifies a listening service. |
+| 23 | A local service running on port `3000` | `localhost` refers to the current computer. |
+| 24 | The current computer | `localhost` is the local machine. |
+| 25 | It is an IPv4 loopback address for the local machine | `127.0.0.1` normally refers back to the current computer. |
+| 26 | A long-running process that provides a capability | Examples include web servers and database servers. |
+| 27 | PostgreSQL | PostgreSQL commonly uses port `5432`. |
+| 28 | Give each user or process only the permissions it needs | This is the principle of least privilege. |
+| 29 | Read | Read permission allows a file’s contents to be viewed. |
+| 30 | It reduces the consequences of bugs or compromise | Restricted privileges limit potential damage. |
 
 ---
 
-## Question 2
+## Section 2 — True or False Answers
 
-Which of the following is software?
-
-- [ ] A keyboard
-- [ ] A monitor
-- [ ] A browser application
-- [ ] A network cable
-
----
-
-## Question 3
-
-What is the primary role of an operating system?
-
-- [ ] To design website layouts
-- [ ] To manage hardware and provide services to applications
-- [ ] To replace the database
-- [ ] To encrypt every file automatically
-
----
-
-## Question 4
-
-Which component executes program instructions?
-
-- [ ] CPU
-- [ ] Folder
-- [ ] URL
-- [ ] Port
+| Question | Answer | Explanation |
+|---:|---|---|
+| 31 | True | A browser is software running through an operating system on hardware. |
+| 32 | False | RAM is temporary working memory; storage preserves data. |
+| 33 | False | A program must be started before it becomes a running process. |
+| 34 | True | A process is a running instance of a program. |
+| 35 | True | The operating system schedules processes and manages resources. |
+| 36 | True | Relative paths are interpreted from the current working directory. |
+| 37 | False | A path beginning with `/` is absolute on Unix-like systems. |
+| 38 | False | A terminal is an interface; a shell interprets commands inside it. |
+| 39 | True | A port identifies a service on a networked system. |
+| 40 | True | `localhost` normally refers to the current computer. |
+| 41 | False | A localhost service is normally accessible only from the same machine. |
+| 42 | True | Environment variables may contain passwords, tokens, and other secrets. |
+| 43 | False | A `.env` file may contain secrets and should not automatically be committed. |
+| 44 | True | Separate processes can run on the same computer and communicate locally. |
+| 45 | True | A process can listen on a port and accept network requests. |
 
 ---
 
-## Question 5
-
-Which statement best describes RAM?
-
-- [ ] It stores data permanently even when the computer is turned off.
-- [ ] It is temporary working memory used by running programs.
-- [ ] It is a network address.
-- [ ] It is a type of database table.
-
----
-
-## Question 6
-
-Which statement best describes persistent storage?
-
-- [ ] It holds information only while a program is running.
-- [ ] It is used only for CPU instructions.
-- [ ] It retains data after the computer is turned off.
-- [ ] It is the same thing as a process.
-
----
-
-## Question 7
-
-What is a program?
-
-- [ ] A running instance of an application
-- [ ] A set of instructions stored for execution
-- [ ] A network port
-- [ ] A folder containing logs
-
----
-
-## Question 8
-
-What is a process?
-
-- [ ] A file that has never been opened
-- [ ] A running instance of a program
-- [ ] A physical storage device
-- [ ] A DNS record
-
----
-
-## Question 9
-
-Which of the following is a directory or folder?
-
-- [ ] `src/`
-- [ ] `app.js`
-- [ ] `3000`
-- [ ] `true`
-
----
-
-## Question 10
-
-Which of the following is most likely a JavaScript file?
-
-- [ ] `styles.css`
-- [ ] `app.js`
-- [ ] `logo.png`
-- [ ] `README.md`
-
----
-
-## Question 11
-
-What does a filesystem do?
-
-- [ ] Manages files, directories, and file metadata
-- [ ] Converts domain names into IP addresses
-- [ ] Renders HTML
-- [ ] Encrypts every HTTP request
-
----
-
-## Question 12
-
-What does the command `pwd` commonly do on Unix-like systems?
-
-- [ ] Deletes the current directory
-- [ ] Prints the current working directory
-- [ ] Starts a web server
-- [ ] Displays running processes
-
----
-
-## Question 13
-
-What does `cd` generally do?
-
-- [ ] Change the current directory
-- [ ] Copy a database
-- [ ] Compress a file
-- [ ] Display a webpage
-
----
-
-## Question 14
-
-What does the following path represent?
-
-```text
-/home/alex/project/src/app.js
-```
-
-- [ ] A relative URL
-- [ ] An absolute filesystem path
-- [ ] An HTTP response
-- [ ] A database query
-
----
-
-## Question 15
-
-Which path is relative?
-
-- [ ] `/home/alex/project/app.js`
-- [ ] `C:\Users\Alex\project\app.js`
-- [ ] `src/app.js`
-- [ ] `/etc/nginx/nginx.conf`
-
----
-
-## Question 16
-
-What does `..` commonly represent in a path?
-
-- [ ] The current directory
-- [ ] The parent directory
-- [ ] The filesystem root
-- [ ] A hidden file
-
----
-
-## Question 17
-
-What is a terminal?
-
-- [ ] A physical CPU component
-- [ ] A text-based interface for interacting with a computer
-- [ ] A database table
-- [ ] A browser cache
-
----
-
-## Question 18
-
-What is a shell?
-
-- [ ] A program that interprets and executes commands
-- [ ] A type of hard drive
-- [ ] A web page
-- [ ] A network cable
-
----
-
-## Question 19
-
-Which of the following is an example of a shell?
-
-- [ ] Bash
-- [ ] PostgreSQL
-- [ ] HTML
-- [ ] Ethernet
-
----
-
-## Question 20
-
-What is the purpose of an environment variable?
-
-- [ ] To store named configuration values for processes
-- [ ] To display images
-- [ ] To replace the operating system
-- [ ] To define HTML headings
-
----
-
-## Question 21
-
-Which of the following could be an environment variable?
-
-- [ ] `PORT=3000`
-- [ ] `button`
-- [ ] `SELECT * FROM users`
-- [ ] `192.168.1.1` only
-
----
-
-## Question 22
-
-What does a network port identify?
-
-- [ ] A physical keyboard key
-- [ ] A service or application on a networked system
-- [ ] A folder
-- [ ] A CSS selector
-
----
-
-## Question 23
-
-What does this address commonly represent?
-
-```text
-http://localhost:3000
-```
-
-- [ ] A remote database only
-- [ ] A local service running on port `3000`
-- [ ] A filesystem path
-- [ ] A DNS root server
-
----
-
-## Question 24
-
-What does `localhost` usually refer to?
-
-- [ ] The nearest cloud provider
-- [ ] The current computer
-- [ ] The public Internet
-- [ ] A database table
-
----
-
-## Question 25
-
-Which statement about `127.0.0.1` is generally correct?
-
-- [ ] It is an IPv4 loopback address for the local machine.
-- [ ] It is always a public production server.
-- [ ] It is a database password.
-- [ ] It is a file permission value.
-
----
-
-## Question 26
-
-What is a service?
-
-- [ ] A long-running process that provides a capability
-- [ ] A CSS rule
-- [ ] A directory name
-- [ ] A temporary keyboard shortcut
-
----
-
-## Question 27
-
-Which process might listen on port `5432`?
-
-- [ ] PostgreSQL
-- [ ] A CSS stylesheet
-- [ ] A PNG image
-- [ ] A text editor document
-
----
-
-## Question 28
-
-What does least privilege mean?
-
-- [ ] Give every program administrator access.
-- [ ] Give each user or process only the permissions it needs.
-- [ ] Remove all permissions from every file.
-- [ ] Allow any browser to access every database.
-
----
-
-## Question 29
-
-Which permission allows a program to view the contents of a file?
-
-- [ ] Read
-- [ ] Write
-- [ ] Execute
-- [ ] Route
-
----
-
-## Question 30
-
-Why should a web application usually not run with unrestricted administrator privileges?
-
-- [ ] It makes the webpage more colorful.
-- [ ] It reduces the consequences of bugs or compromise.
-- [ ] It makes DNS unnecessary.
-- [ ] It prevents all network access.
-
----
-
-# Section 2 — True or False
-
-Mark each statement as true or false.
-
-## Question 31
-
-A browser is software running on hardware through an operating system.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 32
-
-RAM and persistent storage serve exactly the same purpose.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 33
-
-A program stored on disk is automatically a running process.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 34
-
-A process is a running instance of a program.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 35
-
-The operating system manages processes and allocates resources such as CPU time and memory.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 36
-
-A relative path is interpreted based on the current working directory.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 37
-
-The path `/home/alex/project/app.js` is relative.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 38
-
-A terminal and a shell are exactly the same thing.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 39
-
-A port identifies a service on a networked system.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 40
-
-`localhost` usually refers to the current computer.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 41
-
-A development server running on `localhost` is automatically accessible from anywhere on the Internet.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 42
-
-Environment variables can contain sensitive values.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 43
-
-A `.env` file is automatically safe to commit to a public repository.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 44
-
-A database server and a backend application may run as separate processes on the same computer.
-
-- [ ] True
-- [ ] False
-
----
-
-## Question 45
-
-A process can listen on a network port and accept requests.
-
-- [ ] True
-- [ ] False
-
----
-
-# Section 3 — Short-Answer Questions
-
-Answer each question in one or more complete sentences.
+# Section 3 — Short-Answer Model Answers
 
 ## Question 46
 
-What is the difference between hardware and software?
+Hardware is the physical equipment of a computer, such as the CPU, memory, storage, keyboard, and network card. Software is the set of instructions and data that runs on the hardware, such as an operating system, browser, or web server.
 
 ---
 
 ## Question 47
 
-What does the operating system provide to applications?
+The operating system manages hardware and provides services to applications. It manages processes, memory, files, permissions, devices, networking, and system resources.
 
 ---
 
 ## Question 48
 
-Explain the difference between RAM and persistent storage.
+RAM is temporary working memory used by running programs. Persistent storage, such as an SSD or hard drive, stores data for longer periods and generally preserves it when the computer is turned off.
 
 ---
 
 ## Question 49
 
-What is the difference between a program and a process?
+A program is a set of instructions stored on disk. A process is a running instance of that program.
 
 ---
 
 ## Question 50
 
-Why might one application create multiple processes?
+An application may create multiple processes for isolation, parallel work, responsiveness, security, or managing separate tasks. A browser, for example, may use separate processes for tabs, extensions, or rendering.
 
 ---
 
 ## Question 51
 
-What is a filesystem?
+A filesystem organizes data into files, directories, paths, and metadata. It provides a way for applications and the operating system to store and retrieve information.
 
 ---
 
 ## Question 52
 
-What is the difference between a file and a directory?
+A file contains data, such as text, source code, an image, or a log. A directory or folder organizes files and other directories.
 
 ---
 
 ## Question 53
 
-What is the difference between an absolute path and a relative path?
+An absolute path begins from the filesystem root or drive and identifies a location independently of the current directory. A relative path is interpreted from the current working directory.
+
+Example:
+
+```text
+Absolute:
+  /home/alex/project/src/app.js
+
+Relative:
+  src/app.js
+```
 
 ---
 
 ## Question 54
 
-What does the current working directory affect?
+The current working directory affects how relative paths are interpreted, where files are created, and which project configuration files commands find.
 
 ---
 
 ## Question 55
 
-What is the difference between a terminal and a shell?
+A terminal is the interface window where commands are entered. A shell is the program inside the terminal that interprets commands and starts other programs.
 
 ---
 
 ## Question 56
 
-What happens when you run a command in a terminal?
+The shell reads the command, interprets its options and arguments, locates the requested program, asks the operating system to run it, and displays the program’s output and errors.
 
 ---
 
 ## Question 57
 
-What is an environment variable?
+An environment variable is a named value provided to a process by the operating system or execution environment. It is commonly used for configuration such as ports, API URLs, environment names, and credentials.
 
 ---
 
 ## Question 58
 
-Why should production secrets not be placed in frontend environment variables?
+A production secret placed in frontend configuration may be included in JavaScript or other files downloaded by the browser. Users can inspect those files, so the secret would no longer be private.
 
 ---
 
 ## Question 59
 
-What is a port?
+A port identifies a service or application on a networked system. For example, a backend may listen on port `4000`.
 
 ---
 
 ## Question 60
 
-What is the difference between a port and an IP address?
+An IP address identifies a network destination. A port identifies a service on that destination.
+
+```text
+203.0.113.10:443
+```
+
+Here:
+
+```text
+203.0.113.10 = IP address
+443           = port
+```
 
 ---
 
 ## Question 61
 
-What does `localhost` mean?
+`localhost` normally refers to the current computer. A URL such as `http://localhost:3000` usually targets a service running locally on port `3000`.
 
 ---
 
 ## Question 62
 
-Why might a service work at `localhost:3000` but not be reachable from another device?
+The service may listen only on the local loopback interface, such as `127.0.0.1`, rather than on a network-accessible interface. A firewall may also block access.
 
 ---
 
 ## Question 63
 
-What is a service?
+A service is generally a long-running process that provides a capability, such as serving HTTP requests, accepting database queries, or processing background jobs.
 
 ---
 
 ## Question 64
 
-Why is least privilege important?
+Least privilege reduces risk by limiting what a user, process, or service can access. If that identity is compromised or contains a bug, the potential damage is reduced.
 
 ---
 
 ## Question 65
 
-Why should applications have restricted file permissions?
+Restricted permissions prevent unauthorized users or processes from reading, modifying, deleting, or executing files. They are especially important for secrets, configuration, application code, and uploaded files.
 
 ---
 
-# Section 4 — Path Exercises
-
-Assume the current working directory is:
-
-```text
-/home/alex/web-learning
-```
+# Section 4 — Path Exercise Answers
 
 ## Question 66
 
-What absolute path does this relative path refer to?
-
 ```text
-src/app.js
+/home/alex/web-learning/src/app.js
 ```
 
 ---
 
 ## Question 67
 
-What directory does this path refer to?
+```text
+/home/alex
+```
+
+The `..` component moves from:
 
 ```text
-../
+/home/alex/web-learning
+```
+
+to its parent:
+
+```text
+/home/alex
 ```
 
 ---
 
 ## Question 68
 
-What does this path refer to?
-
 ```text
-./frontend
+/home/alex/web-learning/frontend
 ```
+
+The `.` means the current directory.
 
 ---
 
 ## Question 69
 
-What is the relative path from:
+From:
 
 ```text
 /home/alex/web-learning/frontend
@@ -708,47 +262,57 @@ to:
 /home/alex/web-learning/backend
 ```
 
+the relative path is:
+
+```text
+../backend
+```
+
 ---
 
 ## Question 70
-
-What is the difference between these two paths?
 
 ```text
 /products/123
 ```
 
+is a URL path or application route.
+
 ```text
 /home/alex/project/products/123
 ```
+
+is an absolute filesystem path on a Unix-like system.
+
+They may look similar, but they belong to different systems.
 
 ---
 
 ## Question 71
 
-Which of the following is a filesystem path and which is a URL path?
-
 ```text
 /etc/nginx/nginx.conf
 ```
+
+is a filesystem path identifying a configuration file on a Unix-like computer.
 
 ```text
 /api/products/123
 ```
 
-Explain the difference.
+is a URL or HTTP route path. It may be handled dynamically by an application and does not necessarily correspond to a physical file.
 
 ---
 
-# Section 5 — Command Interpretation
-
-Explain what each command is intended to do.
+# Section 5 — Command Interpretation Answers
 
 ## Question 72
 
 ```bash
 pwd
 ```
+
+Prints the current working directory.
 
 ---
 
@@ -758,6 +322,8 @@ pwd
 ls -la
 ```
 
+Lists files and directories in detail, including hidden files.
+
 ---
 
 ## Question 74
@@ -765,6 +331,8 @@ ls -la
 ```bash
 cd ..
 ```
+
+Moves from the current directory to its parent directory.
 
 ---
 
@@ -774,6 +342,8 @@ cd ..
 mkdir -p project/src
 ```
 
+Creates the `project/src` directory structure. The `-p` option creates missing parent directories as needed.
+
 ---
 
 ## Question 76
@@ -781,6 +351,8 @@ mkdir -p project/src
 ```bash
 touch notes.txt
 ```
+
+Creates an empty `notes.txt` file if it does not exist. If the file already exists, it may update its modification timestamp.
 
 ---
 
@@ -790,6 +362,8 @@ touch notes.txt
 cat README.md
 ```
 
+Displays the contents of `README.md` in the terminal.
+
 ---
 
 ## Question 78
@@ -797,6 +371,8 @@ cat README.md
 ```bash
 grep -R "error" .
 ```
+
+Recursively searches from the current directory for lines containing the text `error`.
 
 ---
 
@@ -806,6 +382,8 @@ grep -R "error" .
 tail -f server.log
 ```
 
+Displays the end of `server.log` and continues showing new lines as they are appended. Press `Ctrl + C` to stop following the file.
+
 ---
 
 ## Question 80
@@ -813,6 +391,8 @@ tail -f server.log
 ```bash
 curl -i http://localhost:3000
 ```
+
+Sends an HTTP request to a local service on port `3000` and includes the response headers in the output.
 
 ---
 
@@ -822,6 +402,8 @@ curl -i http://localhost:3000
 ps aux | grep node
 ```
 
+Lists running processes, then filters the output for lines containing `node`.
+
 ---
 
 ## Question 82
@@ -829,6 +411,8 @@ ps aux | grep node
 ```bash
 lsof -i :3000
 ```
+
+Shows processes using network port `3000`, where supported.
 
 ---
 
@@ -838,6 +422,8 @@ lsof -i :3000
 export PORT=4000
 ```
 
+Sets an environment variable named `PORT` to `4000` for the current shell and processes started from it.
+
 ---
 
 ## Question 84
@@ -846,159 +432,287 @@ export PORT=4000
 echo "$PORT"
 ```
 
+Prints the current value of the `PORT` environment variable.
+
 ---
 
-# Section 6 — Scenario Questions
+# Section 6 — Scenario Model Answers
 
 ## Question 85 — Port Already in Use
 
-You try to start a development server:
+This usually means another process is already listening on port `3000`.
 
-```text
-Error: Port 3000 is already in use.
+Possible causes:
+
+- Another development server is running.
+- A previous process did not shut down.
+- Another application uses the port.
+- A container is exposing the port.
+
+Inspect it with:
+
+```bash
+lsof -i :3000
 ```
 
-What might this mean?
+or:
 
-What would you inspect next?
+```bash
+ss -ltnp
+```
+
+On Windows:
+
+```powershell
+netstat -ano
+```
+
+Then stop the correct process or configure the application to use another port.
 
 ---
 
 ## Question 86 — Localhost Connection Failure
 
-You open:
+Possible causes:
 
-```text
-http://localhost:3000
+- The development server is not running.
+- The server is listening on a different port.
+- The process crashed.
+- The service is bound to a different interface.
+- A firewall is blocking the connection.
+- The URL or port is incorrect.
+- The server is using HTTPS instead of HTTP.
+
+Useful checks:
+
+```bash
+curl -v http://localhost:3000
 ```
 
-but the browser reports that the connection was refused.
+```bash
+lsof -i :3000
+```
 
-What are several possible causes?
+Check the terminal where the server was started for errors.
 
 ---
 
 ## Question 87 — Wrong Directory
 
-You run:
+The command may be running outside the project directory.
+
+Check:
 
 ```bash
-npm install
+pwd
+ls -la
 ```
 
-but the command reports that it cannot find the project configuration file.
+Look for the project configuration file, such as:
 
-What might be wrong?
+```text
+package.json
+pyproject.toml
+Cargo.toml
+```
+
+Move into the correct directory before running the command:
+
+```bash
+cd path/to/project
+```
 
 ---
 
 ## Question 88 — Environment Variable Missing
 
-A backend starts successfully but later reports:
+Possible causes:
+
+- The variable was never set.
+- The application was started from another shell.
+- The `.env` file is in the wrong directory.
+- The framework does not automatically load `.env`.
+- The variable name is misspelled.
+- The process was not restarted after configuration changed.
+- The service manager has a different environment.
+
+Check configuration without printing secrets:
 
 ```text
-DATABASE_URL is undefined
+Confirm that the variable exists.
+Confirm the correct environment file is loaded.
+Confirm the process was restarted.
+Confirm the application reads the expected variable name.
 ```
-
-What could cause this?
-
-What would you check?
 
 ---
 
 ## Question 89 — Permission Denied
 
-A web application reports:
+Possible causes:
 
-```text
-Permission denied: cannot read config.json
+- The file belongs to another user.
+- The application user lacks read permission.
+- A parent directory cannot be traversed.
+- The file is protected by a security policy.
+- The service runs as a different user than the terminal command.
+- The file path is incorrect.
+
+Inspect:
+
+```bash
+ls -l config.json
 ```
 
-What are possible causes?
+Also inspect parent directories and the user running the process.
 
-What should you inspect?
+The long-term solution should be correct ownership and permissions, not always running the application as root.
 
 ---
 
 ## Question 90 — Application Works Manually but Not as a Service
 
-You run:
+Possible differences include:
+
+- Different working directory
+- Different environment variables
+- Different `PATH`
+- Different user
+- Different permissions
+- Different Node/Python/runtime version
+- Different relative paths
+- Missing network access
+- Service starts before a dependency is ready
+- Logs are going somewhere else
+
+Inspect:
 
 ```bash
-node server.js
+systemctl status my-app
+journalctl -u my-app
 ```
 
-and the application works.
-
-When started through the operating system’s service manager, it fails.
-
-What differences might explain the problem?
+Compare the service configuration with the manual command.
 
 ---
 
 ## Question 91 — Database Process
 
-Your backend starts, but every database request fails.
+The backend depends on the database process for database operations.
 
-The database process is not running.
+If the database is stopped:
 
-What relationship between processes explains the failure?
+```text
+Backend may still start.
+Database queries fail.
+API requests may return errors.
+Health checks may become unhealthy.
+```
+
+The backend should handle the failure safely and return an appropriate response rather than exposing raw database errors.
 
 ---
 
 ## Question 92 — Public Exposure
 
-A developer starts a local development server and binds it to:
-
-```text
-0.0.0.0:3000
-```
-
-What might this change compared with:
+Binding to:
 
 ```text
 127.0.0.1:3000
 ```
 
-What security consideration should they understand?
+usually allows access only from the same computer.
+
+Binding to:
+
+```text
+0.0.0.0:3000
+```
+
+usually listens on all IPv4 interfaces, which may allow other devices on the network to connect if firewall rules permit it.
+
+A development server bound to all interfaces may expose:
+
+- Debug tools
+- Test data
+- Source code
+- Unfinished functionality
+- Unprotected API endpoints
+
+Use this setting deliberately.
 
 ---
 
 ## Question 93 — Full Disk
 
-A production server suddenly cannot write logs or upload files.
+A full disk can prevent the system from writing:
 
-What system-level problem might cause this?
+- Logs
+- Uploads
+- Temporary files
+- Database data
+- Deployment artifacts
 
-What commands or evidence would you inspect?
+Inspect:
+
+```bash
+df -h
+```
+
+Find large directories:
+
+```bash
+du -sh /var/log/*
+```
+
+Check log rotation, temporary files, database growth, and storage capacity before deleting anything.
 
 ---
 
 ## Question 94 — High Memory Usage
 
-A backend process is using nearly all available memory.
+Possible causes include:
 
-What could cause this?
+- Memory leak
+- Large cache
+- Too many workers
+- Large request or response
+- Unbounded queue
+- Database workload
+- Traffic increase
+- Processing large files
 
-What kinds of measurements would help diagnose it?
+Inspect:
+
+```bash
+top
+```
+
+```bash
+free -h
+```
+
+Check application metrics, recent deployments, traffic levels, and garbage-collection or runtime logs where available.
 
 ---
 
 ## Question 95 — Root Privileges
 
-A developer solves every permission issue by running commands with `sudo`.
+Running everything with `sudo` can:
 
-Why can this be risky?
+- Hide ownership problems
+- Create root-owned files
+- Allow applications to modify sensitive system resources
+- Increase the consequences of vulnerabilities
+- Cause future deployment problems
 
-What would be a better long-term approach?
+Use a restricted service user and grant only the necessary permissions.
 
 ---
 
-# Section 7 — Architecture Questions
+# Section 7 — Architecture Model Answers
 
 ## Question 96
-
-Consider this local development setup:
 
 ```mermaid
 flowchart TD
@@ -1007,119 +721,210 @@ flowchart TD
     API --> DB[(Database :5432)]
 ```
 
-What does each port represent?
+Interpretation:
+
+```text
+Port 3000:
+  Frontend development server
+
+Port 4000:
+  Backend API server
+
+Port 5432:
+  PostgreSQL database, commonly
+```
+
+These are conventions. The actual services may use different ports.
 
 ---
 
 ## Question 97
 
-Why can the frontend and backend be separate processes even when they run on the same computer?
+Processes can communicate through operating-system networking even when they run on the same computer.
+
+For example:
+
+```text
+Browser → localhost:3000
+Frontend → localhost:4000
+Backend → localhost:5432
+```
+
+The client-server relationship is logical and protocol-based; the machines do not have to be physically separate.
 
 ---
 
 ## Question 98
 
-What happens when the browser requests:
+A high-level sequence is:
 
-```text
-http://localhost:3000
+```mermaid
+flowchart TD
+    A[Browser Parses URL] --> B[Resolve localhost]
+    B --> C[Connect to Port 3000]
+    C --> D[Send HTTP Request]
+    D --> E[Frontend Server Reads Files or Generates Response]
+    E --> F[Browser Receives Response]
+    F --> G[Browser Renders Page]
 ```
-
-Describe the process at a high level.
 
 ---
 
 ## Question 99
 
-Why is it useful to keep the database behind the backend instead of exposing it directly to the browser?
+Keeping the database behind the backend helps protect:
+
+- Database credentials
+- Private data
+- Business rules
+- Authorization logic
+- Query structure
+- Database schema
+
+The backend provides a controlled interface and validates every request.
 
 ---
 
 ## Question 100
 
-What resources does the operating system manage for a running backend process?
+The operating system manages resources such as:
+
+```text
+CPU time
+Memory
+Files
+Permissions
+Network connections
+Environment variables
+Input and output
+Process lifecycle
+```
 
 ---
 
 ## Question 101
 
-Consider this architecture:
+The reverse proxy can:
 
-```mermaid
-flowchart LR
-    C[Browser] --> RP[Reverse Proxy]
-    RP --> APP[Application Process]
-    APP --> DB[(Database)]
-```
+- Accept public HTTPS traffic
+- Handle certificates
+- Serve static files
+- Forward API requests
+- Apply rate limits
+- Log requests
+- Hide internal ports
 
-Why might the application listen only on a private address while the reverse proxy listens publicly?
+The application can remain private on a loopback or private network address.
 
 ---
 
 ## Question 102
 
-What could happen if the application process stops while the reverse proxy continues running?
+The reverse proxy may continue running but be unable to reach the application.
+
+Possible results:
+
+```text
+502 Bad Gateway
+503 Service Unavailable
+504 Gateway Timeout
+```
+
+The reverse proxy logs and application service logs should be inspected.
 
 ---
 
 ## Question 103
 
-What could happen if the database process stops while the backend remains running?
+The backend may remain available but database operations will fail.
+
+Possible results:
+
+```text
+500 Internal Server Error
+503 Service Unavailable
+504 Gateway Timeout
+```
+
+Depending on design, health or readiness checks may remove the backend from service.
 
 ---
 
 ## Question 104
 
-Why should different services often run as different operating-system users?
+Different operating-system users limit access between services.
+
+For example:
+
+```text
+Web server user:
+  Web files and selected upload directory
+
+Database user:
+  Database files
+
+Worker user:
+  Queue and object-storage access
+```
+
+If one service is compromised, least privilege limits its ability to damage other components.
 
 ---
 
 ## Question 105
 
-Why should logs, configuration files, application files, and upload directories potentially have different permissions?
+Different resources have different access requirements.
+
+Example:
+
+```text
+Application code:
+  Readable but not generally writable
+
+Configuration:
+  Readable only by the application user
+
+Uploads:
+  Writable by the application, but not executable
+
+Logs:
+  Writable by the logging process
+
+Secrets:
+  Restricted to the smallest necessary group
+```
+
+Separating permissions reduces accidental and malicious access.
 
 ---
 
-# Section 8 — Practical Exercises
+# Section 8 — Practical Exercise Expected Results
 
-These exercises should be performed only on your own computer or an authorized test environment.
+## Exercise 1 — Inspect Your System
 
-## Exercise 1 — Inspect Your Current Directory
+There is no single correct output.
 
-Run:
+You should be able to identify:
+
+```text
+Current working directory
+Visible files
+Hidden files
+Directories
+```
+
+Example commands:
 
 ```bash
 pwd
-```
-
-or the equivalent command for your shell.
-
-Then list files:
-
-```bash
 ls -la
-```
-
-or:
-
-```powershell
-Get-ChildItem
-```
-
-Record:
-
-```text
-Current directory:
-Number of visible files:
-Number of hidden files:
-Number of directories:
 ```
 
 ---
 
 ## Exercise 2 — Create a Practice Project
 
-Create:
+Expected structure:
 
 ```text
 computer-concepts-practice/
@@ -1129,224 +934,135 @@ computer-concepts-practice/
 └── README.md
 ```
 
-Unix-like example:
+Verify with:
 
 ```bash
-mkdir -p computer-concepts-practice/{frontend,backend,docs}
-touch computer-concepts-practice/README.md
+find computer-concepts-practice -maxdepth 2 -print
 ```
 
-PowerShell example:
-
-```powershell
-mkdir computer-concepts-practice
-mkdir computer-concepts-practice/frontend
-mkdir computer-concepts-practice/backend
-mkdir computer-concepts-practice/docs
-New-Item computer-concepts-practice/README.md
-```
+or the equivalent command for your operating system.
 
 ---
 
-## Exercise 3 — Work with Relative Paths
+## Exercise 3 — Relative Paths
 
-Move into the project:
-
-```bash
-cd computer-concepts-practice
-```
-
-Create a file:
-
-```bash
-echo "Frontend notes" > frontend/notes.txt
-```
-
-Read it:
-
-```bash
-cat frontend/notes.txt
-```
-
-Move into the frontend directory:
+After:
 
 ```bash
 cd frontend
 ```
 
-Return to the project root:
+the current directory should be:
+
+```text
+.../computer-concepts-practice/frontend
+```
+
+After:
 
 ```bash
 cd ..
 ```
 
-Explain what `..` did.
+the current directory should be:
+
+```text
+.../computer-concepts-practice
+```
+
+The `..` component refers to the parent directory.
 
 ---
 
-## Exercise 4 — Run a Local Server
+## Exercise 4 — Local Server
 
-From a practice directory, run:
+For:
 
 ```bash
 python -m http.server 8000
 ```
 
-Open:
-
-```text
-http://localhost:8000
-```
-
-In another terminal, run:
-
-```bash
-curl -i http://localhost:8000
-```
-
-Record:
+expected values include:
 
 ```text
 HTTP method:
+  GET
+
 Host:
+  localhost
+
 Port:
+  8000
+
 Path:
-Status code:
+  /
+
+Expected status:
+  Usually 200 if the server can return a directory listing or index file
+
 Content type:
+  Often text/html for a directory listing
 ```
 
-Stop the server with:
-
-```text
-Ctrl + C
-```
+The exact response may vary depending on the files in the directory and Python version.
 
 ---
 
 ## Exercise 5 — Inspect the Port
 
-Start the server again:
+The process running the Python server should appear as the process listening on port `8000`.
 
-```bash
-python -m http.server 8000
+The exact command output differs by operating system.
+
+After pressing:
+
+```text
+Ctrl + C
 ```
 
-Then inspect listening ports:
-
-```bash
-ss -ltnp
-```
-
-or:
-
-```bash
-lsof -i :8000
-```
-
-On Windows:
-
-```powershell
-netstat -ano
-```
-
-Find the process associated with port `8000`.
+the process stops and port `8000` should no longer be served by that process.
 
 ---
 
 ## Exercise 6 — Environment Variables
 
-Unix-like shell:
-
-```bash
-export APP_NAME="Computer Concepts Practice"
-echo "$APP_NAME"
-```
-
-PowerShell:
-
-```powershell
-$env:APP_NAME = "Computer Concepts Practice"
-Write-Output $env:APP_NAME
-```
-
-Answer:
+The value should be:
 
 ```text
-What value was stored?
-Which process can access it?
-How long does it remain available?
+APP_NAME=Computer Concepts Practice
 ```
+
+The variable is available to the current shell and child processes started from that shell.
+
+It may not be available in a new terminal unless configured there too.
 
 ---
 
-## Exercise 7 — Read a Growing Log
+## Exercise 7 — Growing Log
 
-Create a log file:
+`tail -f` remains active and displays new lines appended to the file.
 
-```bash
-echo "INFO server started" > practice.log
+After adding:
+
+```text
+WARN retrying connection
 ```
 
-Follow it:
+the line should appear in the active output.
 
-```bash
-tail -f practice.log
-```
-
-In another terminal, append a line:
-
-```bash
-echo "WARN example message" >> practice.log
-```
-
-Observe the new line.
-
-Stop following the log:
+Press:
 
 ```text
 Ctrl + C
 ```
 
----
-
-## Exercise 8 — Inspect a Process
-
-Start a long-running command:
-
-```bash
-python -m http.server 8000
-```
-
-Find it:
-
-```bash
-ps aux | grep python
-```
-
-Stop it with:
-
-```text
-Ctrl + C
-```
-
-Answer:
-
-```text
-What was the process?
-Which user ran it?
-Which port did it use?
-What happened after it stopped?
-```
+to stop following the file.
 
 ---
 
-# Section 9 — Review Challenge
-
-Answer without looking back at the primer.
+# Section 9 — Review Challenge Answers
 
 ## Question 106
-
-Explain this diagram:
 
 ```mermaid
 flowchart TD
@@ -1360,150 +1076,220 @@ flowchart TD
     OS --> D
 ```
 
+Interpretation:
+
+```text
+User:
+  Interacts with the system.
+
+Browser:
+  Runs client-side code and displays the interface.
+
+Frontend process:
+  May serve or build frontend resources during development.
+
+Backend process:
+  Handles API requests and business logic.
+
+Database process:
+  Stores and retrieves persistent data.
+
+Operating system:
+  Runs and manages all processes and their resources.
+```
+
 ---
 
 ## Question 107
 
-Explain the difference between:
-
 ```text
-localhost
-127.0.0.1
-0.0.0.0
+localhost:
+  Hostname referring to the current computer.
+
+127.0.0.1:
+  IPv4 loopback address for the current computer.
+
+0.0.0.0:
+  Common server-binding address meaning all IPv4 interfaces.
 ```
+
+`0.0.0.0` is usually not used as a destination address for a client request.
 
 ---
 
 ## Question 108
 
-Why might a file exist on disk but not be accessible to a web application?
+Possible reasons include:
+
+- Wrong ownership
+- Missing read permission
+- Parent directory cannot be traversed
+- Service runs as a different user
+- Incorrect path
+- Security policy
+- File is encrypted or unavailable
+- Application is running in a container with a different filesystem
 
 ---
 
 ## Question 109
 
-Why might a backend process work when started from a terminal but fail when started by a service manager?
+Possible differences include:
+
+```text
+Working directory
+Environment variables
+User
+Permissions
+PATH
+Runtime version
+Relative paths
+Network access
+Startup order
+```
+
+A service manager creates a different execution environment from an interactive terminal.
 
 ---
 
 ## Question 110
 
-Explain why a port can be “in use” even if you do not see a visible application window.
+A process can run in the background or as a service without a visible application window. It may still hold a port open.
+
+Find it with:
+
+```bash
+lsof -i :3000
+```
+
+or:
+
+```bash
+ss -ltnp
+```
 
 ---
 
 ## Question 111
 
-Why should production applications use restricted operating-system users?
+Restricted users reduce the damage caused by:
+
+- Application vulnerabilities
+- Compromised dependencies
+- Malicious uploads
+- Incorrect file operations
+- Stolen service credentials
 
 ---
 
 ## Question 112
 
-What is the relationship between:
+```text
+Program:
+  Instructions stored on disk.
+
+Process:
+  Running instance of a program.
+
+Service:
+  Usually a long-running process that provides a capability.
+
+Port:
+  Network endpoint identifying a service on a host.
+```
+
+Example:
 
 ```text
-Program
-Process
-Service
-Port
+server.js:
+  Program source
+
+node server.js:
+  Running process
+
+Backend API:
+  Service capability
+
+localhost:4000:
+  Host and port where the service listens
 ```
 
 ---
 
-# Section 10 — Self-Assessment
+# Final Review Rubric
 
-Rate each statement from 1 to 5:
+Use this rubric to evaluate short answers, scenarios, and architecture questions.
+
+## Excellent
+
+The answer:
 
 ```text
-1 = I do not understand this yet.
-5 = I can explain and demonstrate this confidently.
+Uses correct terminology
+Explains cause and effect
+Identifies the relevant operating-system or network layer
+Mentions practical evidence or commands
+Recognizes security implications
 ```
 
+## Good
+
+The answer:
+
 ```text
-[ ] I can explain hardware and software.
-[ ] I can explain what an operating system does.
-[ ] I understand RAM versus storage.
-[ ] I understand program versus process.
-[ ] I can navigate directories.
-[ ] I understand absolute and relative paths.
-[ ] I can read basic terminal commands.
-[ ] I understand pipes and redirection.
-[ ] I understand exit codes.
-[ ] I can inspect a running process.
-[ ] I can identify a port.
-[ ] I understand localhost.
-[ ] I understand environment variables.
-[ ] I understand basic permissions.
-[ ] I understand services.
-[ ] I can describe a local frontend/backend/database setup.
+Identifies the main concept correctly
+Provides a mostly accurate explanation
+May omit deeper operational details
 ```
 
----
+## Developing
 
-# Suggested Review Topics
-
-If you struggled with:
-
-## Hardware and operating systems
-
-Review:
+The answer:
 
 ```text
-Primer 1 — Sections 1–12
+Shows partial understanding
+Confuses related concepts
+Needs more detail or a practical example
 ```
 
-## Files, paths, and permissions
+## Needs Review
 
-Review:
-
-```text
-Primer 1 — Sections 13–27
-Primer 2 — Command-Line Fundamentals
-```
-
-## Processes and services
-
-Review:
+The answer:
 
 ```text
-Primer 1 — Sections 7–10
-Primer 11 — Linux and Server Basics
-```
-
-## Ports and local services
-
-Review:
-
-```text
-Primer 1 — Sections 43–50
-Primer 2 — Sections 34–45
-Primer 11 — Sections 22–31
-```
-
-## Environment variables
-
-Review:
-
-```text
-Primer 1 — Sections 38–42
-Primer 2 — Sections 36–39
+Misidentifies the core concept
+Relies on incorrect assumptions
+Does not distinguish files, processes, ports, or environments
 ```
 
 ---
 
-# Completion Criteria
+# Recommended Review Topics
 
-You are ready to continue when you can:
+If you scored below approximately 75%, revisit the relevant sections before continuing.
 
 ```text
-Explain the difference between a program and a process.
-Navigate a project with relative and absolute paths.
-Run a local server.
-Identify which port it uses.
-Send a request to localhost.
-Read basic process and server output.
-Explain why permissions matter.
-Explain how frontend, backend, and database processes connect.
+Computer architecture:
+  Primer 1, Sections 1–12
+
+Files and paths:
+  Primer 1, Sections 13–27
+  Primer 2, Sections 8–25
+
+Processes and ports:
+  Primer 1, Sections 7–10 and 43–50
+  Primer 11, Sections 13–36
+
+Environment variables:
+  Primer 1, Sections 38–42
+  Primer 2, Sections 36–39
+
+Command-line operations:
+  Primer 2
+
+Networking and local services:
+  Primer 2, Sections 40–45
+  Primer 11, Sections 22–31
 ```
 
+That completes the updated **`primer-01-computer-concepts.md`** with answer keys, model answers, practical exercise guidance, and a review rubric.
