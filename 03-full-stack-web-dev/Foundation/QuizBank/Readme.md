@@ -1,499 +1,865 @@
-Yes. An extensive Q&A bank would be an excellent addition, especially for this series.
+# Quizzes and Tests
 
-It would serve a different purpose from the tutorials, primers, and appendices:
+This folder contains quizzes, review questions, assessments, scenario exercises, and practical tests for the **Web Mechanics, Architecture & Network Fundamentals** learning series.
 
-```text
-Primers:
-  Build prerequisites
+The purpose of this directory is to help learners:
 
-Main parts:
-  Teach concepts progressively
-
-Appendices:
-  Provide reference material
-
-Q&A bank:
-  Test understanding and reveal gaps
-```
-
-# Why a Q&A Bank Is Valuable
-
-A strong Q&A bank can help readers:
-
-- Review key concepts
+- Review important concepts
+- Check whether they understand the material
+- Identify knowledge gaps
+- Practice explaining technical ideas
+- Apply concepts to realistic web-application scenarios
 - Prepare for technical interviews
-- Practice explaining systems
-- Identify weak areas
-- Learn common troubleshooting patterns
-- Connect isolated concepts
-- Practice architecture reasoning
-- Distinguish similar terms
-- Build confidence before writing code
+- Test troubleshooting and architecture skills
 
-The most valuable questions should not only ask:
-
-```text
-What does DNS stand for?
-```
-
-They should also ask:
-
-```text
-What happens when a browser requests a domain whose DNS record exists but whose server is unavailable?
-```
-
-That tests understanding rather than memorization.
+These materials are designed to supplement the tutorials, primers, and appendices. They are not intended to replace them.
 
 ---
 
-# Recommended Q&A Categories
+## Learning Resource Structure
 
-## 1. Concept-definition questions
+The complete learning system is organized into four layers:
 
-Examples:
+```text
+Foundation Primers
+  ↓
+Core Tutorial Series
+  ↓
+Appendices and Reference Guides
+  ↓
+Quizzes, Tests, and Scenario Practice
+```
 
-- What is a client?
-- What is a server?
-- What is an API?
-- What is a protocol?
-- What is a port?
-- What is a database?
+The quizzes and tests should be used after studying the relevant material.
+
+---
+
+# Directory Purpose
+
+This folder may contain:
+
+```text
+Short quizzes
+Part review quizzes
+Primer review quizzes
+Module tests
+Scenario-based questions
+Troubleshooting drills
+Architecture exercises
+Security assessments
+Performance exercises
+Capstone assessments
+Answer keys
+```
+
+A possible structure:
+
+```text
+quizzes-and-tests/
+├── README.md
+├── quizzes/
+│   ├── primer-01-computer-concepts.md
+│   ├── primer-02-command-line.md
+│   ├── part-01-architecture.md
+│   ├── part-02-networking.md
+│   ├── part-03-http.md
+│   ├── part-04-apis.md
+│   └── part-05-diagnostics.md
+├── tests/
+│   ├── foundation-test.md
+│   ├── architecture-test.md
+│   ├── networking-test.md
+│   ├── http-api-test.md
+│   └── production-readiness-test.md
+├── scenarios/
+│   ├── request-tracing.md
+│   ├── api-debugging.md
+│   ├── authentication-failure.md
+│   ├── slow-page-load.md
+│   └── production-outage.md
+├── answer-keys/
+│   ├── primer-answers.md
+│   ├── part-answers.md
+│   ├── scenario-answers.md
+│   └── capstone-answers.md
+└── rubrics/
+    ├── architecture-rubric.md
+    ├── troubleshooting-rubric.md
+    └── capstone-rubric.md
+```
+
+The exact structure may evolve as the series grows.
+
+---
+
+# Assessment Categories
+
+## 1. Knowledge Quizzes
+
+Short quizzes test vocabulary and basic understanding.
+
+Example questions:
+
+- What does DNS do?
+- What is the difference between a client and a server?
+- What does `401 Unauthorized` usually mean?
+- What is the purpose of the `Content-Type` header?
 - What is a CDN?
-- What is a cache?
-
-These are useful for vocabulary building.
-
----
-
-## 2. Compare-and-contrast questions
-
-Examples:
-
-- What is the difference between the Internet and the Web?
 - What is the difference between authentication and authorization?
-- What is the difference between a frontend and a backend?
-- What is the difference between a database and a cache?
-- What is the difference between a `401` and a `403`?
-- What is the difference between `PUT` and `PATCH`?
-- What is the difference between latency and bandwidth?
-- What is the difference between REST and GraphQL?
-- What is the difference between a process and a program?
 
-These are particularly useful because beginners often confuse related terms.
+These questions are useful after completing a primer or tutorial part.
 
 ---
 
-## 3. Request-tracing questions
+## 2. Conceptual Review Questions
 
-These ask learners to follow a complete journey.
+Conceptual questions test whether learners understand how systems work.
 
 Example:
 
-> What happens after a user enters `https://example.com/products` into a browser?
+> Why should a browser normally not connect directly to a private database?
 
-Expected reasoning:
+A strong answer should mention:
 
-```mermaid
-flowchart TD
-    A[User Enters URL] --> B[Browser Parses URL]
-    B --> C[DNS Resolves Host]
-    C --> D[Connection Established]
-    D --> E[TLS Handshake]
-    E --> F[HTTP Request]
-    F --> G[Server Processing]
-    G --> H[HTTP Response]
-    H --> I[Browser Rendering]
-```
-
-Other examples:
-
-- Trace a login request.
-- Trace a file upload.
-- Trace an API request to a database.
-- Trace an image request through a CDN.
-- Trace an order through a payment provider and queue.
+- Security boundaries
+- Business logic
+- Authorization
+- Data validation
+- Credential protection
+- Controlled access through a backend API
 
 ---
 
-## 4. Troubleshooting questions
+## 3. Scenario-Based Questions
 
-Examples:
-
-- The browser shows a `404`. What should you inspect?
-- The browser shows `401`. What does that usually mean?
-- cURL works, but browser JavaScript fails. What could cause the difference?
-- A page is blank, but the HTML request succeeded. What should you investigate?
-- A request returns `500`. Which systems might be involved?
-- DNS resolves, but the site times out. What does that suggest?
-- A page shows stale content. Which cache layers could be involved?
-- A form submits twice. What could be happening?
-
-These questions develop practical debugging ability.
-
----
-
-## 5. Architecture questions
-
-Examples:
-
-- Where should price calculation occur?
-- Why should browsers not connect directly to private databases?
-- Which parts of an application should be asynchronous?
-- When might a CDN help?
-- When might server-side rendering be useful?
-- Why would a system use a message queue?
-- When might a monolith be preferable to microservices?
-- What should happen if an email provider is unavailable?
-
-These questions train design judgment.
-
----
-
-## 6. Security questions
-
-Examples:
-
-- Why is client-side validation insufficient?
-- Why should secrets not be included in frontend code?
-- What is the difference between encryption and authentication?
-- How does HTTPS help?
-- What does `HttpOnly` do?
-- Why is hiding an admin button not authorization?
-- What is SQL injection?
-- What is XSS?
-- What is CSRF?
-- Why should uploaded files be treated as untrusted?
-
-These should include safe, practical explanations rather than exploit instructions.
-
----
-
-## 7. HTTP and API questions
-
-Examples:
-
-- What is the structure of an HTTP request?
-- What does `Content-Type` describe?
-- What does `Accept` describe?
-- When should you use `GET`?
-- What does `201 Created` mean?
-- Why might an API return `202 Accepted`?
-- What is idempotency?
-- How should a large collection be paginated?
-- What is the difference between a path parameter and a query parameter?
-
----
-
-## 8. Diagram interpretation questions
-
-Show a Mermaid diagram and ask the reader to explain it.
-
-```mermaid
-flowchart LR
-    B[Browser] --> CDN[CDN]
-    CDN --> LB[Load Balancer]
-    LB --> A1[App Server 1]
-    LB --> A2[App Server 2]
-    A1 --> DB[(Database)]
-    A2 --> DB
-```
-
-Questions:
-
-- What does the CDN do?
-- Why are there two application servers?
-- What is the load balancer’s responsibility?
-- What happens if App Server 1 fails?
-- Is the database still a single point of failure?
-
-Diagram questions are excellent for architectural understanding.
-
----
-
-## 9. Scenario-based questions
-
-These are usually the most valuable.
+Scenario questions require learners to apply concepts to realistic situations.
 
 Example:
 
-> A user clicks “Place Order.” The browser sends `POST /api/orders`, but the response is `409 Conflict`. What might have happened?
+> A user clicks “Place Order.” The browser sends `POST /api/orders`, but the server returns `409 Conflict`. What might have happened?
 
-Expected possibilities:
+Possible explanations include:
 
-```text
-Inventory changed
-Duplicate order conflict
-Concurrent update
-Resource state no longer permits the operation
-```
+- Inventory changed
+- The order conflicts with current state
+- A duplicate request was detected
+- A concurrent update occurred
+- The operation is no longer valid
 
-Another:
+---
 
-> A page loads in development but returns `502 Bad Gateway` in production. What should you inspect?
+## 4. Troubleshooting Drills
+
+Troubleshooting exercises ask learners to identify the failing layer.
+
+Example:
+
+> A page appears blank. The HTML request returns `200`, but no API requests appear in DevTools. Where should you investigate?
 
 Possible areas:
 
-```text
-Reverse proxy
-Application process
-Application port
-Health checks
-Firewall rules
-Environment variables
-Upstream connectivity
-```
+- JavaScript initialization
+- Runtime exceptions
+- Frontend mounting
+- Event handlers
+- Route configuration
+- Failed JavaScript bundle loading
 
 ---
 
-## 10. Practical command questions
+## 5. Architecture Exercises
 
-Examples:
-
-- What does `curl -I` do?
-- What does `curl -v` show?
-- How do you send JSON with cURL?
-- How do you follow redirects?
-- How do you inspect which process uses port `3000`?
-- What does `git status` show?
-- What does `git diff --cached` show?
-- How do you inspect a service’s logs?
-- How do you check DNS resolution?
-- How do you test an API without a browser?
-
-These questions reinforce the command-line and diagnostic primers.
-
----
-
-# Recommended Answer Structure
-
-Each answer should ideally contain:
-
-```text
-Short answer
-Detailed explanation
-Example
-Common mistake
-Related concepts
-```
+Architecture exercises ask learners to design or evaluate systems.
 
 Example:
 
-## Question
+> Design an architecture for an online store that supports product browsing, payments, file uploads, and email notifications.
 
-What is the difference between authentication and authorization?
+A reasonable design may include:
 
-## Short answer
+```mermaid
+flowchart TD
+    U[Users] --> B[Browser]
+    B --> CDN[CDN]
+    B --> API[Backend API]
 
-Authentication verifies who someone is. Authorization determines what they are allowed to do.
+    API --> AUTH[Authentication]
+    API --> DB[(Database)]
+    API --> STORAGE[Object Storage]
+    API --> PAY[Payment Provider]
+    API --> Q[Message Queue]
 
-## Example
-
-```text
-Authentication:
-  User proves they are Alex.
-
-Authorization:
-  Server checks whether Alex may edit order 9001.
+    Q --> W[Email Worker]
+    W --> EMAIL[Email Provider]
 ```
-
-## Common mistake
-
-Being logged in does not mean the user can access every resource.
 
 ---
 
-# Suggested Difficulty Levels
+## 6. Practical Command Tests
 
-Use levels to make the bank progressive.
+These tests require learners to use tools such as:
+
+- Browser Developer Tools
+- cURL
+- Postman
+- Bruno
+- Git
+- Terminal commands
+- Database clients
+
+Example tasks:
+
+```bash
+curl -i https://example.com
+curl -I https://example.com
+curl -v https://example.com
+```
+
+Learners may be asked to:
+
+- Identify the status code
+- Inspect response headers
+- Reproduce a browser request
+- Send a JSON payload
+- Add an authorization header
+- Diagnose a redirect
+- Check a local service
+
+---
+
+# Question Difficulty Levels
+
+Questions should use consistent difficulty levels.
 
 ## Level 1 — Recall
 
-```text
-What does HTTP stand for?
-What is a port?
-What does DNS do?
-```
+Tests basic vocabulary.
+
+Example:
+
+> What does HTTP stand for?
 
 ## Level 2 — Understanding
 
-```text
-Why does a browser use DNS?
-Why are headers useful?
-Why does a backend validate client input?
-```
+Tests whether the learner can explain a concept.
+
+Example:
+
+> Why is HTTPS different from HTTP?
 
 ## Level 3 — Application
 
-```text
-Which status code should an API return when validation fails?
-How would you test an API without a frontend?
-```
+Requires using a concept in a practical situation.
+
+Example:
+
+> Which HTTP method would you normally use to partially update a user profile?
 
 ## Level 4 — Analysis
 
-```text
-A request returns 200, but the UI is empty. What layers could be involved?
-```
-
-## Level 5 — Architecture
-
-```text
-Design a system that serves users globally while protecting a private database.
-```
-
----
-
-# Suggested Q&A Bank Organization
-
-```text
-Section A — Computer and command-line fundamentals
-Section B — Frontend and backend architecture
-Section C — Internet and networking
-Section D — DNS and addressing
-Section E — HTTP and HTTPS
-Section F — APIs and REST
-Section G — GraphQL and RPC
-Section H — Browser DevTools and diagnostics
-Section I — Databases and persistence
-Section J — Security
-Section K — Performance
-Section L — Reliability and production
-Section M — Scenario-based architecture
-Section N — Troubleshooting drills
-Section O — Interview-style review questions
-Section P — Capstone questions
-```
-
----
-
-# Add Answers at Multiple Depths
-
-For beginner-friendliness, include expandable depth conceptually:
-
-```text
-Quick answer:
-  One or two sentences.
-
-Expanded answer:
-  Detailed explanation and example.
-
-Deep-dive note:
-  Advanced tradeoffs and exceptions.
-```
-
-This lets beginners avoid being overwhelmed while giving experienced learners more depth.
-
----
-
-# Include “Why the Other Answers Are Wrong”
-
-For multiple-choice questions, explain incorrect options.
+Requires diagnosing a problem.
 
 Example:
 
-> Which status code usually means authentication is required?
+> A request returns `200 OK`, but the interface displays no products. What should you inspect?
 
-```text
-A. 401
-B. 403
-C. 404
-D. 500
-```
+## Level 5 — Architecture and Design
 
-Answer:
+Requires making and justifying technical decisions.
 
-```text
-A. 401
+Example:
 
-403 means the caller is known but lacks permission.
-404 means the resource was not found.
-500 means the server encountered an internal failure.
-```
-
-This is more educational than providing only the correct letter.
+> Design a reliable order-processing workflow that prevents duplicate orders when clients retry requests.
 
 ---
 
-# Include Confidence and Evidence Questions
+# Question Formats
 
-Useful prompts include:
+Questions may use different formats.
+
+## Multiple choice
+
+```markdown
+### Question
+
+Which status code usually indicates that authentication is required?
+
+- [ ] `200 OK`
+- [ ] `401 Unauthorized`
+- [ ] `403 Forbidden`
+- [ ] `500 Internal Server Error`
+
+**Answer:** `401 Unauthorized`
+```
+
+## Short answer
+
+```markdown
+### Question
+
+What is the difference between authentication and authorization?
+
+**Answer:**
+
+Authentication verifies identity. Authorization determines what that identity is allowed to do.
+```
+
+## Explain the diagram
+
+```markdown
+### Question
+
+Explain the role of each component in this architecture.
+
+```mermaid
+flowchart LR
+    B[Browser] --> API[API]
+    API --> DB[(Database)]
+```
+```
+
+## Troubleshooting scenario
+
+```markdown
+### Scenario
+
+A request returns `404 Not Found`.
+
+What should you inspect first?
+
+**Expected areas:**
+
+- Request URL
+- HTTP method
+- API version
+- Route definition
+- Environment
+- Resource identifier
+```
+
+## Practical task
+
+```markdown
+### Task
+
+Use cURL to send a JSON `POST` request to an API endpoint.
+
+Your request should include:
+
+- `Content-Type: application/json`
+- A JSON request body
+- An appropriate HTTP method
+```
+
+---
+
+# Recommended Quiz Format
+
+Each quiz should include:
 
 ```text
-What evidence would confirm your diagnosis?
-Which panel or command would you use?
-What would you expect to see?
-What result would rule out your hypothesis?
+Title
+Learning objectives
+Prerequisites
+Instructions
+Questions
+Answer key
+Explanations
+Suggested review topics
 ```
 
 Example:
 
-> You suspect a request is failing because of CORS. What evidence would you inspect?
+```markdown
+# Part 3 Quiz — HTTP and HTTPS
 
-Expected answer:
+## Learning Objectives
 
-```text
-Browser Console error
-OPTIONS preflight
-Origin header
-Access-Control-Allow-Origin
-Allowed methods
-Allowed headers
-Credentials behavior
-```
+After completing this quiz, you should be able to:
 
-This teaches investigation rather than guessing.
+- Identify the parts of an HTTP request.
+- Explain common HTTP methods.
+- Interpret status codes.
+- Describe what HTTPS protects.
 
----
+## Instructions
 
-# Add Review Checklists
-
-At the end of each Q&A section:
-
-```text
-Can I explain the concept without memorizing a definition?
-Can I give an example?
-Can I identify a failure mode?
-Can I inspect it in DevTools or cURL?
-Can I explain where the code runs?
-Can I identify the trust boundary?
+- Answer each question before viewing the answer.
+- Explain your reasoning for scenario questions.
+- Review the explanations for incorrect answers.
 ```
 
 ---
 
-# Add Capstone Q&A
+# Recommended Test Format
 
-A final capstone could follow:
+A larger test may include sections:
+
+```text
+Section A — Vocabulary
+Section B — HTTP and API interpretation
+Section C — Troubleshooting
+Section D — Architecture
+Section E — Practical command-line tasks
+Section F — Security and production reasoning
+```
+
+Example weighting:
+
+```text
+Vocabulary:                 15%
+Conceptual understanding:   20%
+Practical application:     25%
+Troubleshooting:            20%
+Architecture:               20%
+```
+
+The exact weighting may change depending on the test.
+
+---
+
+# Answer Key Guidelines
+
+Answer keys should explain more than just the correct option.
+
+A useful answer should contain:
+
+```text
+Correct answer
+Reasoning
+Why other answers are incorrect
+Related concepts
+Common mistake
+```
+
+Example:
+
+```markdown
+### Question
+
+What is the difference between `401` and `403`?
+
+### Answer
+
+- `401 Unauthorized` usually means authentication is missing, invalid, or expired.
+- `403 Forbidden` usually means the server knows who the caller is but refuses to authorize the operation.
+
+### Common Mistake
+
+Treating every permission failure as `401`.
+```
+
+For scenario questions, multiple answers may be reasonable if the learner explains the tradeoffs correctly.
+
+---
+
+# Scenario Answer Guidelines
+
+Scenario answers should distinguish between:
+
+```text
+Likely cause
+Possible causes
+Evidence to collect
+Next diagnostic step
+Potential fix
+Preventive measure
+```
+
+Example structure:
+
+```markdown
+## Scenario
+
+The browser sends a request, but the response is `500 Internal Server Error`.
+
+## Likely Areas
+
+- Backend exception
+- Database failure
+- External service failure
+- Missing configuration
+- Deployment issue
+
+## Evidence to Collect
+
+- Request URL
+- Request body
+- Response body
+- Request ID
+- Server logs
+- Database logs
+- Recent deployment history
+
+## Recommended Next Step
+
+Reproduce the request with cURL and locate the request ID in the server logs.
+```
+
+---
+
+# Scoring Guidance
+
+Scoring should reward understanding and reasoning, not only memorization.
+
+## Basic question
+
+```text
+Correct answer: Full credit
+Incorrect answer: No credit
+```
+
+## Short explanation
+
+```text
+Correct concept with minor wording issue: Full or near-full credit
+Partially correct concept: Partial credit
+Incorrect concept: No credit
+```
+
+## Architecture question
+
+Evaluate:
+
+```text
+Correct component responsibilities
+Security boundaries
+Data ownership
+Failure handling
+Scalability reasoning
+Tradeoff explanation
+```
+
+## Troubleshooting question
+
+Evaluate:
+
+```text
+Correct layer identification
+Evidence-based reasoning
+Appropriate diagnostic tool
+Correct interpretation of results
+Safe proposed fix
+```
+
+---
+
+# Suggested Score Labels
+
+Use labels instead of treating scores as absolute judgments.
+
+```text
+90–100%:
+  Strong understanding
+
+75–89%:
+  Good understanding; review weaker sections
+
+60–74%:
+  Partial understanding; revisit key concepts
+
+Below 60%:
+  Review the relevant primer or tutorial section
+```
+
+For scenario and architecture work, use qualitative feedback as well.
+
+---
+
+# How to Use This Folder
+
+A recommended workflow:
+
+```text
+1. Study the relevant primer or tutorial part.
+2. Complete the quiz without looking at answers.
+3. Review incorrect answers.
+4. Read the explanations.
+5. Complete a scenario or practical exercise.
+6. Revisit the related tutorial sections.
+7. Retake the quiz later.
+```
+
+Do not use the answer key as the first step.
+
+The goal is to identify what you can explain independently.
+
+---
+
+# Recommended Learning Paths
+
+## Beginner path
+
+```text
+Primer 1 quiz
+Primer 2 quiz
+Primer 3 quiz
+Primer 4 quiz
+Primer 5 quiz
+Part 0 review
+Part 1 review
+Part 2 review
+Part 3 review
+Part 4 review
+Part 5 review
+Part 6 review
+```
+
+## Networking-focused path
+
+```text
+Primer 1
+Primer 2
+Part 2
+Part 3
+Appendix D
+Appendix E
+Appendix K
+```
+
+## API-focused path
+
+```text
+Primer 3
+Primer 5
+Part 3
+Part 4
+Part 5
+Appendix G
+Appendix H
+```
+
+## Security-focused path
+
+```text
+Primer 5
+Primer 7
+Part 1
+Part 3
+Appendix I
+Appendix K
+Appendix L
+```
+
+## Production-focused path
+
+```text
+Primer 2
+Primer 6
+Primer 7
+Primer 11
+Primer 12
+Part 6
+Appendix J
+Appendix K
+Appendix L
+```
+
+---
+
+# Naming Conventions
+
+Use clear, predictable filenames.
+
+Examples:
+
+```text
+primer-01-computer-concepts-quiz.md
+primer-02-command-line-quiz.md
+primer-03-programming-fundamentals-quiz.md
+part-01-architecture-quiz.md
+part-02-networking-quiz.md
+part-03-http-quiz.md
+part-04-api-paradigms-quiz.md
+part-05-diagnostics-quiz.md
+part-06-production-quiz.md
+```
+
+Scenario files:
+
+```text
+scenario-dns-failure.md
+scenario-api-401.md
+scenario-api-500.md
+scenario-slow-page-load.md
+scenario-order-processing.md
+scenario-deployment-rollback.md
+```
+
+Answer files:
+
+```text
+answer-key-primer-01.md
+answer-key-part-03.md
+answer-key-scenarios.md
+```
+
+---
+
+# Suggested Directory Structure
+
+```text
+quizzes-and-tests/
+├── README.md
+├── quizzes/
+│   ├── primers/
+│   │   ├── primer-01-computer-concepts.md
+│   │   ├── primer-02-command-line.md
+│   │   ├── primer-03-programming.md
+│   │   ├── primer-04-html-css-javascript.md
+│   │   ├── primer-05-data-json.md
+│   │   ├── primer-06-git.md
+│   │   ├── primer-07-databases-sql.md
+│   │   ├── primer-08-security.md
+│   │   ├── primer-09-accessibility.md
+│   │   ├── primer-10-testing.md
+│   │   ├── primer-11-linux-servers.md
+│   │   └── primer-12-cloud-deployment.md
+│   └── parts/
+│       ├── part-00-introduction.md
+│       ├── part-01-architecture.md
+│       ├── part-02-networking.md
+│       ├── part-03-http-https.md
+│       ├── part-04-api-paradigms.md
+│       ├── part-05-diagnostics.md
+│       └── part-06-production.md
+├── tests/
+│   ├── foundation-test.md
+│   ├── architecture-test.md
+│   ├── networking-test.md
+│   ├── http-api-test.md
+│   ├── security-test.md
+│   └── production-readiness-test.md
+├── scenarios/
+│   ├── dns-failure.md
+│   ├──-page-not-loading.md
+│   ├── api-debugging.md
+│   ├── authentication-failure.md
+│   ├── authorization-failure.md
+│   ├── slow-request.md
+│   ├── database-outage.md
+│   ├── duplicate-order.md
+│   └── deployment-rollback.md
+├── answer-keys/
+│   ├── primers.md
+│   ├── parts.md
+│   ├── tests.md
+│   └── scenarios.md
+└── rubrics/
+    ├── architecture.md
+    ├── troubleshooting.md
+    ├── security.md
+    └── capstone.md
+```
+
+Correct any filenames that contain accidental spaces or inconsistent naming before adding files.
+
+---
+
+# Question Quality Standards
+
+Questions should be:
+
+```text
+Clear
+Specific
+Relevant
+Unambiguous
+Appropriately difficult
+Connected to the tutorials
+```
+
+Avoid questions that depend on:
+
+- Unexplained framework-specific behavior
+- Unstable tool versions
+- Trick wording
+- Minor terminology disputes
+- Memorization without application
+- Details not covered in the learning material
+
+For scenario questions, accept multiple valid approaches when the reasoning is sound.
+
+---
+
+# Use Mermaid Diagrams for Systems Questions
+
+Mermaid diagrams are useful for:
+
+- Request flows
+- DNS resolution
+- Authentication
+- API calls
+- Database relationships
+- Deployment pipelines
+- Failure paths
+- Load balancing
+- Caching
+- Queues
+- Troubleshooting decision trees
+
+Example:
+
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant DNS as DNS Resolver
+    participant API as API Server
+    participant DB as Database
+
+    B->>DNS: Resolve api.example.com
+    DNS-->>B: Return IP address
+    B->>API: HTTPS request
+    API->>DB: Query data
+    DB-->>API: Return result
+    API-->>B: JSON response
+```
+
+Questions may ask learners to:
+
+```text
+Explain the sequence.
+Identify trust boundaries.
+Identify possible failures.
+Suggest diagnostic evidence.
+```
+
+---
+
+# Capstone Assessment
+
+A final capstone may ask learners to analyze an entire feature:
 
 ```text
 A user places an order in an online store.
 ```
 
-Ask:
+Required topics:
 
-1. What happens in the browser?
-2. What HTTP method is used?
-3. What data is sent?
-4. How is the user authenticated?
-5. Where is authorization enforced?
-6. How does DNS participate?
-7. How does HTTPS protect communication?
-8. How does the backend validate the order?
-9. How does the backend check inventory?
-10. Where is the order stored?
-11. How is payment processed?
-12. Which operations should be asynchronous?
-13. Which status codes could be returned?
-14. What happens if payment times out?
-15. How would you inspect the request?
-16. How would you reproduce it with cURL?
-17. What logs and metrics should exist?
-18. How would you prevent duplicate orders?
-19. How would you recover if the database failed?
-20. Which security boundaries are involved?
+```text
+Frontend interaction
+HTTP request
+DNS
+TLS
+Authentication
+Authorization
+Validation
+Database
+Inventory
+Payment
+Idempotency
+Queue
+Email notification
+Response handling
+Error states
+Logging
+Monitoring
+Recovery
+```
 
 ```mermaid
 flowchart TD
-    U[User] --> B[Browser]
+    U[User Clicks Place Order] --> B[Browser]
     B --> R[HTTP Request]
     R --> DNS[DNS]
     DNS --> TLS[TLS]
@@ -502,130 +868,67 @@ flowchart TD
     AUTH --> AZ[Authorization]
     AZ --> V[Validation]
     V --> INV[Inventory]
-    V --> PAY[Payment]
+    V --> PAY[Payment Provider]
     V --> DB[(Database)]
-    API --> Q[Queue]
-    Q --> EMAIL[Email Worker]
-    API --> RESP[Response]
+    API --> Q[Notification Queue]
+    Q --> W[Email Worker]
+    API --> RESP[HTTP Response]
     RESP --> B
 ```
 
----
-
-# Recommended Size
-
-A genuinely extensive bank could contain:
-
-```text
-Beginner recall:
-  50–75 questions
-
-Conceptual understanding:
-  75–100 questions
-
-HTTP and APIs:
-  100–150 questions
-
-Troubleshooting:
-  75–100 questions
-
-Security:
-  75–100 questions
-
-Performance and production:
-  75–100 questions
-
-Architecture scenarios:
-  50–75 questions
-
-Capstone:
-  25–50 questions
-```
-
-A total of roughly:
-
-```text
-500–700 questions
-```
-
-would be substantial without becoming repetitive.
-
-You could also produce a smaller first release:
-
-```text
-25 questions per main part
-10 questions per primer
-50 scenario questions
-```
+The capstone should evaluate explanation, not just terminology recall.
 
 ---
 
-# Important Design Principle
+# Contribution Guidelines
 
-Do not make every question a vocabulary quiz.
-
-A strong Q&A bank should test whether the learner can:
+When adding a quiz or test:
 
 ```text
-Explain
-Compare
-Trace
-Predict
-Diagnose
-Design
-Justify
-Apply
+1. Identify the relevant tutorial, primer, or appendix.
+2. Define the learning objectives.
+3. Use clear question numbering.
+4. Include a mixture of question types.
+5. Add explanations to the answer key.
+6. Avoid exposing secrets or real credentials.
+7. Verify code examples.
+8. Confirm Mermaid diagrams render on GitHub.
+9. Check links and filenames.
+10. Review difficulty and ambiguity.
 ```
 
-The best question type is often:
-
-> What would you inspect next, and why?
-
-That question develops real engineering judgment.
+For scenario answers, explain why the proposed diagnosis is reasonable.
 
 ---
 
-# Recommendation
+# Final Purpose
 
-Yes—create the Q&A bank as a separate resource after the primers and appendices.
+This folder is intended to turn passive reading into active learning.
 
-Recommended structure:
-
-```text
-Foundation Primers
-Core Series
-Appendices
-Q&A Bank
-  Part 0–6 Review
-  Primer Review
-  Scenario Drills
-  Troubleshooting Drills
-  Architecture Scenarios
-  Security Review
-  Interview-Style Questions
-  Capstone Assessment
-```
-
-Use Mermaid diagrams for:
-
-- Request journeys
-- Failure decision trees
-- Architecture scenarios
-- Authentication flows
-- Deployment flows
-- Database relationships
-- Performance bottlenecks
-
-This would turn the series from a tutorial into a complete learning system:
+Use it to:
 
 ```text
-Learn the concepts
-  ↓
-Practice with examples
-  ↓
-Look up reference material
-  ↓
-Test understanding
-  ↓
-Apply knowledge to scenarios
+Recall concepts
+Explain systems
+Apply knowledge
+Diagnose failures
+Compare designs
+Practice tools
+Review security
+Prepare for production
 ```
+
+The best learning loop is:
+
+```mermaid
+flowchart LR
+    L[Learn] --> P[Practice]
+    P --> Q[Answer Questions]
+    Q --> R[Review Mistakes]
+    R --> A[Apply to Scenario]
+    A --> L
+```
+
+The goal is not simply to get correct quiz scores.
+
+The goal is to become capable of explaining, inspecting, debugging, designing, and operating web applications with confidence.
