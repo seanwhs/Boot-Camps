@@ -1,5 +1,3 @@
-# `primer-01-computer-concepts.md`
-
 # Primer 1 Quiz — Basic Computer Concepts  
 ## Files, Programs, Processes, Memory, Storage, Terminals, Networks, Ports, and Local Systems
 
