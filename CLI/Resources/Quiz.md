@@ -1,5 +1,3 @@
-[STARTING: Assessment Pack: PowerShell, Node.js, and Runtime Configuration]
-
 # Quiz and Answer-Key Pack
 
 These quizzes cover:
