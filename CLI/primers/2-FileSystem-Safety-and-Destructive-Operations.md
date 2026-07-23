@@ -1,5 +1,3 @@
-[GENERATED: Primer 1: How to Read PowerShell Commands] [STARTING: Primer 2: Filesystem Safety and Destructive Operations]
-
 # Primer 2: Filesystem Safety and Destructive Operations
 
 PowerShell can create, copy, move, rename, and delete thousands of files in seconds. That speed is useful—but it also means a small mistake can have a large effect.
