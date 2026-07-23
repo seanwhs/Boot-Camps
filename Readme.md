@@ -77,7 +77,7 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 > **Key Focus:** Building responsive, native-feeling mobile applications with offline storage and push notifications.
 
-* **Core Tech:** React Native / Expo, Flutter, Dart, Swift, Mobile UI/UX design patterns.
+* **Core Tech:** React Native / Expo, TypeScript, Async Storage / SQLite, Mobile UI/UX Design Patterns.
 * **Featured Projects:**
 * [`/04-mobile-development/habit-tracker`](https://www.google.com/search?q=./04-mobile-development/) — Cross-platform iOS/Android app with local SQLite persistence and native widgets.
 
@@ -87,7 +87,7 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 > **Goal:** Extracting actionable insights from complex datasets, statistical modeling, feature engineering, and predictive machine learning workflows.
 
-* **Core Tech:** Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, SQL, Jupyter Notebooks.
+* **Core Tech:** Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, Tensorflow, SQL, Jupyter Notebooks.
 * **Featured Projects:**
 * [`/05-data-science/customer-churn-analysis`](https://www.google.com/search?q=./05-data-science/) — Exploratory Data Analysis (EDA) and predictive classification model for customer retention.
 * [`/05-data-science/sql-data-warehouse`](https://www.google.com/search?q=./05-data-science/) — Relational data modeling, aggregation queries, and ETL pipeline notebooks.
