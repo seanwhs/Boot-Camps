@@ -21,23 +21,6 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 ---
 
-## 📂 Directory Structure
-
-```text
-.
-├── 📁 01-architecture/            # System design blueprints, C4 models, ERDs, ADRs, cloud specs
-├── 📁 02-product-management/     # PRDs, roadmaps, competitive analyses, wireframes, user journeys
-├── 📁 03-full-stack-web-dev/     # React, Next.js, Node.js, Express, PostgreSQL, Web APIs
-├── 📁 04-mobile-development/     # React Native / Flutter, iOS & Android builds
-├── 📁 05-data-science/          # Python, Pandas, NumPy, Scikit-Learn, SQL, EDA, Jupyter Notebooks
-├── 📁 06-cybersecurity/         # Network analysis, Bash/Python tooling, Labs, CTFs
-├── 📁 07-artificial-intelligence/# PyTorch, TensorFlow, LLM orchestration, Prompt Eng
-└── 📁 docs/                     # General study notes, cheat sheets, & cross-track diagrams
-
-```
-
----
-
 ## 🛠️ Track Breakdowns & Highlights
 
 ### 1. 🏛️ Architecture
@@ -46,8 +29,8 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 * **Core Concepts:** Enterprise Architecture, C4 Model, Cloud Infrastructure (AWS/GCP/Azure), Locality of Behavior (LoB), Event-Driven Systems, Domain-Driven Design (DDD), Architecture Decision Records (ADRs).
 * **Featured Assets:**
-* [`/01-architecture/saas-system-design`](https://www.google.com/search?q=./01-architecture/) — End-to-end architectural specification and topology map for an event-driven platform.
-* [`/01-architecture/adrs`](https://www.google.com/search?q=./01-architecture/) — Collection of Architecture Decision Records evaluating infrastructure choices, data storage models, and auth boundaries.
+* End-to-end architectural specification and topology map for an event-driven platform.
+* Collection of Architecture Decision Records evaluating infrastructure choices, data storage models, and auth boundaries.
 
 
 
@@ -57,8 +40,8 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 * **Core Deliverables:** Product Requirement Documents (PRDs), User Story Mapping, OKR frameworks, Competitor Audits, Wireframes, Metrics & Analytics frameworks.
 * **Featured Assets:**
-* [`/02-product-management/prd-ai-platform`](https://www.google.com/search?q=./02-product-management/) — Comprehensive PRD for an AI-native learning management platform.
-* [`/02-product-management/feature-roadmap`](https://www.google.com/search?q=./02-product-management/) — Strategic product roadmap and prioritization framework (RICE model).
+* Comprehensive PRD for an AI-native learning management platform.
+* Strategic product roadmap and prioritization framework (RICE model).
 
 
 
@@ -68,8 +51,8 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 * **Core Tech:** TypeScript, React, Next.js, Node.js, Express, PostgreSQL, TailwindCSS, Docker.
 * **Featured Projects:**
-* [`/03-full-stack-web-dev/capstone-saas`](https://www.google.com/search?q=./03-full-stack-web-dev/) — Multi-tenant SaaS platform with authentication, payments, and background job queues.
-* [`/03-full-stack-web-dev/rest-api-server`](https://www.google.com/search?q=./03-full-stack-web-dev/) — Scalable Node/Express RESTful API with PostgreSQL & Prisma ORM.
+* Multi-tenant SaaS platform with authentication, payments, and background job queues.
+* Scalable Node/Express RESTful API with PostgreSQL & Prisma ORM.
 
 
 
@@ -79,7 +62,7 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 * **Core Tech:** React Native / Expo, TypeScript, Async Storage / SQLite, Mobile UI/UX Design Patterns.
 * **Featured Projects:**
-* [`/04-mobile-development/habit-tracker`](https://www.google.com/search?q=./04-mobile-development/) — Cross-platform iOS/Android app with local SQLite persistence and native widgets.
+* Cross-platform iOS/Android app with local SQLite persistence and native widgets.
 
 
 
@@ -89,8 +72,8 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 * **Core Tech:** Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, Tensorflow, SQL, Jupyter Notebooks.
 * **Featured Projects:**
-* [`/05-data-science/customer-churn-analysis`](https://www.google.com/search?q=./05-data-science/) — Exploratory Data Analysis (EDA) and predictive classification model for customer retention.
-* [`/05-data-science/sql-data-warehouse`](https://www.google.com/search?q=./05-data-science/) — Relational data modeling, aggregation queries, and ETL pipeline notebooks.
+* Exploratory Data Analysis (EDA) and predictive classification model for customer retention.
+* Relational data modeling, aggregation queries, and ETL pipeline notebooks.
 
 
 
@@ -100,8 +83,8 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 * **Core Tech:** Wireshark, Nmap, Bash scripting, Linux Admin, Burp Suite, Python Security Scripts.
 * **Featured Labs:**
-* [`/06-cybersecurity/network-packet-analyzer`](https://www.google.com/search?q=./06-cybersecurity/) — Custom Python script for filtering and inspecting pcap files.
-* [`/06-cybersecurity/linux-hardening-lab`](https://www.google.com/search?q=./06-cybersecurity/) — Bash scripts for system audit automated remediations.
+* Custom Python script for filtering and inspecting pcap files.
+* Bash scripts for system audit automated remediations.
 
 
 
@@ -111,7 +94,7 @@ This monorepo serves as a unified workspace for tracking my technical growth, co
 
 * **Core Tech:** PyTorch, Hugging Face, LangChain, OpenAI APIs, Vector DBs (Pinecone/Chroma).
 * **Featured Projects:**
-* [`/07-artificial-intelligence/rag-knowledge-base`](https://www.google.com/search?q=./07-artificial-intelligence/) — Retrieval-Augmented Generation (RAG) assistant querying local documentation.
+* Retrieval-Augmented Generation (RAG) assistant querying local documentation.
 
 
 
